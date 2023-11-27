@@ -1,11 +1,6 @@
 #ifndef _BINARY_TREES_H_
 #define _BINARY_TREES_H_
 
-/* library */
-#include <stdio.h>
-#include <stdlib.h>
-#include <stddef.h>
-
 /**
  * struct binary_tree_s - Binary tree node
  *
@@ -16,12 +11,20 @@
  */
 typedef struct binary_tree_s
 {
-    int n;
-    struct binary_tree_s *parent;
-    struct binary_tree_s *left;
-    struct binary_tree_s *right;
+	int n;
+	struct binary_tree_s *parent;
+	struct binary_tree_s *left;
+	struct binary_tree_s *right;
 } binary_tree_t;
 
-void binary_tree_print(const binary_tree_t *);
+/* library */
+#include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
+
+/* functions */
+static int print_t(const binary_tree_t *tree, int offset, int depth, char **s);
+void binary_tree_print(const binary_tree_t *tree);
+binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 
 #endif /* _BINARY_TREES_H_ */
