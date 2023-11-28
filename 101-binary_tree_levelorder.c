@@ -12,16 +12,19 @@
 
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
+	binary_tree_t *queue[100];
+	int front = 0, back = 0;
+
 	if (!tree || !func)
 		return;
-	if (tree->parent == NULL)
-		func(tree->n);
-	if (tree->left)
-		func(tree->left->n);
-	if (tree->right)
-		func(tree->right->n);
-	if (tree->left)
-		binary_tree_levelorder(tree->left, func);
-	if (tree->right)
-		binary_tree_levelorder(tree->right, func);
+	queue[back] = (binary_tree_t *)tree;
+	while (front <= back)
+	{
+		if (queue[front]->left)
+			queue[++back] = queue[front]->left;
+		if (queue[front]->right)
+			queue[++back] = queue[front]->right;
+		func(queue[front]->n);
+		front++;
+	}
 }
