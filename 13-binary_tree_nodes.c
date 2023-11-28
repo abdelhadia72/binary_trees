@@ -1,7 +1,8 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_nodes - Counts the nodes in a binary tree with at least one child.
+ * binary_tree_nodes - Counts the nodes in a
+ * binary tree with at least one child.
  * @tree: Pointer to the root of the tree.
  *
  * Return: Number of nodes with at least one child, 0 if @tree is NULL.
