@@ -8,5 +8,6 @@ F:
 
 -----------------
 A:
-25: Done (4 checkes red)
-27: ON
+25: Done (4 checkes red) + later
+27: Done
+29: Done
