@@ -10,38 +10,44 @@
 
 bst_t *bst_insert(bst_t **tree, int value)
 {
+	bst_t *new_node = NULL, *current = NULL;
+
+	if (tree == NULL)
+		return (NULL);
+
 	if (*tree == NULL)
 	{
-		// Value is not found, so a new node is created.
-		*tree = binary_tree_node(NULL, value);
-		return *tree;
+		new_node = binary_tree_node(NULL, value);
+		*tree = new_node;
+		return (new_node);
 	}
-	else if ((*tree)->n < value)
+
+	current = *tree;
+	while (current)
 	{
-		// Value is greater than the current node, so it should be inserted to the right.
-		if ((*tree)->right == NULL)
+		if (current->n == value)
+			return (NULL);
+
+		if (current->n > value)
 		{
-			(*tree)->right = binary_tree_node(*tree, value);
-			return (*tree)->right;
+			if (current->left == NULL)
+			{
+				new_node = binary_tree_node(current, value);
+				current->left = new_node;
+				return (new_node);
+			}
+			current = current->left;
 		}
 		else
 		{
-			return bst_insert(&((*tree)->right), value);
+			if (current->right == NULL)
+			{
+				new_node = binary_tree_node(current, value);
+				current->right = new_node;
+				return (new_node);
+			}
+			current = current->right;
 		}
 	}
-	else if ((*tree)->n > value)
-	{
-		// Value is less than the current node, so it should be inserted to the left.
-		if ((*tree)->left == NULL)
-		{
-			(*tree)->left = binary_tree_node(*tree, value);
-			return (*tree)->left;
-		}
-		else
-		{
-			return bst_insert(&((*tree)->left), value);
-		}
-	}
-	// If the value is already present in the tree, we return NULL.
-	return NULL;
+	return (NULL);
 }
