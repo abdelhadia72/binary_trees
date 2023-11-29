@@ -8,4 +8,5 @@ F:
 
 -----------------
 A:
-25: Dmouchkila mea hada
+25: Done (4 checkes red)
+27: ON
