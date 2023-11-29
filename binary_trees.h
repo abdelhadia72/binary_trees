@@ -15,7 +15,9 @@ typedef struct binary_tree_s
 	struct binary_tree_s *parent;
 	struct binary_tree_s *left;
 	struct binary_tree_s *right;
-} binary_tree_t, bst_t;
+} binary_tree_t;
+
+typedef binary_tree_t bst_t;
 
 /* library */
 #include <stdio.h>
