@@ -9,10 +9,24 @@
 
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
-    f:
-    24 on
-    25 off
-    26 off
-    27 off
+	if (tree == NULL)
+		return (0);
 
+	if (tree->left != NULL)
+	{
+		if (tree->left->n > tree->n)
+			return (0);
+		if (binary_tree_is_bst(tree->left) == 0)
+			return (0);
+	}
+
+	if (tree->right != NULL)
+	{
+		if (tree->right->n < tree->n)
+			return (0);
+		if (binary_tree_is_bst(tree->right) == 0)
+			return (0);
+	}
+
+	return (1);
 }
