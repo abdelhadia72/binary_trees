@@ -5,7 +5,9 @@ F:
 28: done
 30 : done
 32: cant need 14
-34 : ON
+34 : done
+36: ON (kayjiwk sahlin)
+
 
 
 -----------------
