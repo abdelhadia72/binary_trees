@@ -20,14 +20,14 @@ bst_t *array_to_bst(int *array, size_t size)
 	{
 		if (bst_search(root, array[i]) == NULL)
 		{
-			if (bst_insert(root, array[i]) == NULL)
+			if (bst_insert(&root, array[i]) == NULL)
 			{
 				return (NULL);
 			}
 		}
 	}
 
-	return root;
+	return (root);
 }
 
 /**
