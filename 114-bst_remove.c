@@ -1,5 +1,7 @@
 #include "binary_trees.h"
 
+bst_t *inorder_successor(bst_t *root);
+
 /**
  * inorder_successor - Returns the minimum value of a binary search tree.
  * @root: A pointer to the root node of the BST to search.
@@ -10,7 +12,7 @@ bst_t *inorder_successor(bst_t *root)
 {
 	while (root->left != NULL)
 		root = root->left;
-	return root;
+	return (root);
 }
 
 /**
@@ -25,32 +27,55 @@ bst_t *inorder_successor(bst_t *root)
  */
 bst_t *bst_remove(bst_t *root, int value)
 {
-	if (root == NULL)
-		return NULL;
+	bst_t *node = root, *parent = NULL, *successor = NULL;
 
-	if (value < root->n)
-		root->left = bst_remove(root->left, value);
-	else if (value > root->n)
-		root->right = bst_remove(root->right, value);
-	else
+	while (node != NULL)
 	{
-		if (root->left == NULL)
+		if (node->n == value)
 		{
-			bst_t *temp = root->right;
-			free(root);
-			return temp;
-		}
-		else if (root->right == NULL)
-		{
-			bst_t *temp = root->left;
-			free(root);
-			return temp;
-		}
+			/* No children or right-child only */
+			if (node->left == NULL)
+			{
+				if (parent != NULL && parent->left == node)
+					parent->left = node->right;
+				else if (parent != NULL)
+					parent->right = node->right;
+				if (node->right != NULL)
+					node->right->parent = parent;
+				free(node);
+				return (parent == NULL ? node->right : root);
+			}
 
-		bst_t *successor = inorder_successor(root->right);
-		root->n = successor->n;
-		root->right = bst_remove(root->right, successor->n);
+			/* Left-child only */
+			if (node->right == NULL)
+			{
+				if (parent != NULL && parent->left == node)
+					parent->left = node->left;
+				else if (parent != NULL)
+					parent->right = node->left;
+				node->left->parent = parent;
+				free(node);
+				return (parent == NULL ? node->left : root);
+			}
+
+			/* Two children */
+			successor = inorder_successor(node->right);
+			node->n = successor->n;
+			value = successor->n;
+			parent = node;
+			node = node->right;
+		}
+		else if (node->n > value)
+		{
+			parent = node;
+			node = node->left;
+		}
+		else
+		{
+			parent = node;
+			node = node->right;
+		}
 	}
 
-	return root;
+	return (root);
 }
