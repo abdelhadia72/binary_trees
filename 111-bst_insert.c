@@ -36,6 +36,10 @@ bst_t *bst_insert(bst_t **tree, int value)
 		else
 			return (bst_insert(&((*tree)->right), value));
 	}
+	else
+	{
+		return (NULL);
+	}
 
 	return (NULL);
 }
