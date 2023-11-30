@@ -26,11 +26,11 @@ Abdelhadi Bousaadah
   <a href="https://www.linkedin.com/in/abdelhadibou/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&labelColor=blue" alt="LinkedIn Badge">
   </a>
-<p></p>
+<span></span>
   <a href="mailto:abdelhadi.bousaadah@gmaill.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-red?logo=mail.ru" alt="Email Badge">
   </a>
-<p></p>
+<span></span>
   <a href="https://github.com/abdelhadia72" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-black?logo=github" alt="GitHub Badge">
   </a>
