@@ -1,4 +1,4 @@
-# Binary Trees in C
+# 🌳 Binary Trees in C
 
 ![Language Badge](https://img.shields.io/badge/%E2%AC%9E-Language-blue?logo=c) ![Compilation Badge](https://img.shields.io/badge/Ubuntu-compiled-red?logo=ubuntu)
 
@@ -18,11 +18,11 @@
 
 ```
 
-## Overview
+## 🌱 Overview
 
 Binary trees are fundamental data structures crucial in computer science. This repository aims to provide clean, well-documented, and modular implementations of various binary tree operations.
 
-## Functions and Files
+## 📂 Functions and Files
 
 | File                           | Function Name              | Description                                                          |
 | ------------------------------ | -------------------------- | -------------------------------------------------------------------- |
