@@ -9,9 +9,10 @@
  *
  * Return: Pointer to the created node, or NULL on failure
  */
+
 bst_t *bst_insert(bst_t **tree, int value)
 {
-	bst_t *new_node, *current;
+	bst_t *new_node = NULL, *current = (*tree);
 
 	if (tree == NULL)
 		return (NULL);
@@ -23,32 +24,32 @@ bst_t *bst_insert(bst_t **tree, int value)
 		*tree = new_node;
 		return (new_node);
 	}
-
-	current = *tree;
-	if (value == current->n)
+	while (1)
 	{
-		free(new_node);
-		return (NULL);
-	}
-	else if (value < current->n)
-	{
-		if (current->left == NULL)
+		if (value == current->n)
 		{
-			current->left = new_node;
-			new_node->parent = current;
-			return (new_node);
+			free(new_node);
+			return (NULL);
 		}
-		current = current->left;
-	}
-	else
-	{
-		if (current->right == NULL)
+		else if (value < current->n)
 		{
-			current->right = new_node;
-			new_node->parent = current;
-			return (new_node);
+			if (current->left == NULL)
+			{
+				current->left = new_node;
+				new_node->parent = current;
+				return (new_node);
+			}
+			current = current->left;
 		}
-		current = current->right;
+		else
+		{
+			if (current->right == NULL)
+			{
+				current->right = new_node;
+				new_node->parent = current;
+				return (new_node);
+			}
+			current = current->right;
+		}
 	}
-	return (bst_insert(&current, value));
 }
