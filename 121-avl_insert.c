@@ -17,7 +17,7 @@ avl_t *avl_balancer(avl_t **tree)
 {
 	int balance_factor = binary_tree_balance(*tree);
 
-	if (balance_factor >= 1)
+	if (balance_factor > 1)
 	{
 		if (binary_tree_balance((*tree)->left) >= 0)
 		{
@@ -29,9 +29,9 @@ avl_t *avl_balancer(avl_t **tree)
 			*tree = binary_tree_rotate_right(*tree);
 		}
 	}
-	else if (balance_factor <= -1)
+	else if (balance_factor < -1)
 	{
-		if (binary_tree_balance((*tree)->right) <= -1)
+		if (binary_tree_balance((*tree)->right) <= 0)
 		{
 			*tree = binary_tree_rotate_left(*tree);
 		}
@@ -93,6 +93,8 @@ avl_t *avl_insert(avl_t **tree, int value)
 {
 	if (!tree)
 		return (NULL);
+
+	*tree = avl_balancer(tree);
 
 	int balance_factor = binary_tree_balance(*tree);
 
