@@ -18,25 +18,39 @@
 
 ```
 
-## Others
+## 💻 Others
 
-Abdelhadi Bousaadah
+#### Abdelhadi Bousaadah
 
 <div>
   <a href="https://www.linkedin.com/in/abdelhadibou/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&labelColor=blue" alt="LinkedIn Badge">
   </a>
-<span></span>
+
   <a href="mailto:abdelhadi.bousaadah@gmaill.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-red?logo=mail.ru" alt="Email Badge">
   </a>
-<span></span>
+
   <a href="https://github.com/abdelhadia72" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-black?logo=github" alt="GitHub Badge">
   </a>
 </div>
 
-Fahd Azouz
+#### Fahd Azouz
+
+<div>
+  <a href="www.linkedin.com/in/fahd-azouz-6ba1b5236" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&labelColor=blue" alt="LinkedIn Badge">
+  </a>
+
+  <a href="mailto:2. fahdstudies00@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-red?logo=mail.ru" alt="Email Badge">
+  </a>
+
+  <a href="https://github.com/FahdAzouz" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-black?logo=github" alt="GitHub Badge">
+  </a>
+</div>
 
 ## Overview
 
