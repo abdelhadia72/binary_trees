@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "binary_trees.h"
 
 /**
@@ -7,28 +9,50 @@
  *
  * Return: Pointer to the created node, or NULL on failure
  */
-
 bst_t *bst_insert(bst_t **tree, int value)
 {
+	bst_t *new_node, *current;
 
-	if (!(*tree) || !tree)
+	if (tree == NULL)
+		return (NULL);
+
+	new_node = binary_tree_node(NULL, value);
+	if (new_node == NULL)
+		return (NULL);
+
+	if (*tree == NULL)
 	{
-		*tree = binary_tree_node(NULL, value);
-		return (*tree);
+		*tree = new_node;
+		return (new_node);
 	}
 
-	if (value < (*tree)->n)
+	current = *tree;
+	while (1)
 	{
-		if (!(*tree)->left)
-			return (binary_tree_node(*tree, value));
-		return (bst_insert(&((*tree)->left), value));
+		if (value == current->n)
+		{
+			free(new_node);
+			return (NULL);
+		}
+		else if (value < current->n)
+		{
+			if (current->left == NULL)
+			{
+				current->left = new_node;
+				new_node->parent = current;
+				return (new_node);
+			}
+			current = current->left;
+		}
+		else
+		{
+			if (current->right == NULL)
+			{
+				current->right = new_node;
+				new_node->parent = current;
+				return (new_node);
+			}
+			current = current->right;
+		}
 	}
-	else if (value > (*tree)->n)
-	{
-		if (!(*tree)->right)
-			return (binary_tree_node(*tree, value));
-		return (bst_insert(&((*tree)->right), value));
-	}
-
-	return (NULL);
 }
