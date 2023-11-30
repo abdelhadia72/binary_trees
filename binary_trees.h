@@ -73,4 +73,5 @@ void heapify(heap_t *root);
 void _preorder(heap_t *tree, heap_t **node, size_t height);
 size_t tree_size_h(const binary_tree_t *tree);
 size_t tree_height(const heap_t *tree);
+int heap_extract(heap_t **root);
 #endif /* _BINARY_TREES_H_ */
