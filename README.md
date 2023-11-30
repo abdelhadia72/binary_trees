@@ -18,40 +18,6 @@
 
 ```
 
-## 💻 Others
-
-#### Abdelhadi Bousaadah
-
-<div>
-  <a href="https://www.linkedin.com/in/abdelhadibou/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&labelColor=blue" alt="LinkedIn Badge">
-  </a>
-
-  <a href="mailto:abdelhadi.bousaadah@gmaill.com" target="_blank">
-    <img src="https://img.shields.io/badge/Email-red?logo=mail.ru" alt="Email Badge">
-  </a>
-
-  <a href="https://github.com/abdelhadia72" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-black?logo=github" alt="GitHub Badge">
-  </a>
-</div>
-
-#### Fahd Azouz
-
-<div>
-  <a href="www.linkedin.com/in/fahd-azouz-6ba1b5236" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&labelColor=blue" alt="LinkedIn Badge">
-  </a>
-
-  <a href="mailto:2. fahdstudies00@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/Email-red?logo=mail.ru" alt="Email Badge">
-  </a>
-
-  <a href="https://github.com/FahdAzouz" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-black?logo=github" alt="GitHub Badge">
-  </a>
-</div>
-
 ## Overview
 
 Binary trees are fundamental data structures crucial in computer science. This repository aims to provide clean, well-documented, and modular implementations of various binary tree operations.
@@ -96,3 +62,37 @@ Binary trees are fundamental data structures crucial in computer science. This r
 | 131-heap_insert.c              | `heap_insert`              | Inserts a new value into a binary heap.                              |
 | 132-array_to_heap.c            | `array_to_heap`            | Builds a binary heap from an array.                                  |
 | 133-heap_extract.c             | `heap_extract`             | Extracts the root value from a binary heap.                          |
+
+## 💻 Others
+
+<div>
+<h3 >Abdelhadi Bousaadah </h3>
+  <a href="https://www.linkedin.com/in/abdelhadibou/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&labelColor=blue" alt="LinkedIn Badge">
+  </a>
+
+  <a href="mailto:abdelhadi.bousaadah@gmaill.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-red?logo=mail.ru" alt="Email Badge">
+  </a>
+
+  <a href="https://github.com/abdelhadia72" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-black?logo=github" alt="GitHub Badge">
+  </a>
+</div>
+
+<div>
+	<h3>Fahd Azouz</h3>
+<a href="www.linkedin.com/in/fahd-azouz-6ba1b5236" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&labelColor=blue" alt="LinkedIn Badge">
+  </a>
+
+  <a href="mailto:2. fahdstudies00@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-red?logo=mail.ru" alt="Email Badge">
+  </a>
+
+  <a href="https://github.com/FahdAzouz" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-black?logo=github" alt="GitHub Badge">
+  </a>
+</div>
+
+---
